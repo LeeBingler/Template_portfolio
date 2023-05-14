@@ -4,10 +4,26 @@
     padding: 0;
     margin: 0;
     font-family: "Poppins", sans-serif;
+    box-sizing: border-box;
 }
 
 body {
     color: #FCF6F5;
     background: url("../picture/background.png") no-repeat black;
     background-size: cover;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 100px;
+
+    border: solid 1px grey;
 }
