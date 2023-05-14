@@ -25,5 +25,52 @@ body {
     justify-content: space-between;
     padding: 20px 100px;
 
-    border: solid 1px grey;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 32px;
+    font-weight: 700;
+    color: #FCF6F5;
+    text-decoration: none;
+}
+
+.navbar a {
+    font-size: 18px;
+    font-weight: 600;
+    color: #FCF6F5;
+    text-decoration: none;
+    margin-left: 20px;
+    position: relative;
+}
+
+.navbar a::before {
+    content: '';
+    background: #FCF6F5;
+    position: absolute;
+    height: 2px;
+    width: 0;
+    bottom: -2;
+    left: 0;
+
+    transition: all 300ms;
+}
+
+.navbar a:hover::before {
+    width: 95%;
+}
+
+@media screen and (max-width: 750px) {
+    .header {
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .navbar a {
+        font-size: 17px;
+    }
+
+    .navbar a:nth-child(1) {
+        margin: 0;
+    }
 }
