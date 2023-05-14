@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Vollkorn&display=swap');
 
 * {
     padding: 0;
@@ -14,34 +15,31 @@ body {
 }
 
 .header {
-    position: fixed;
-    top: 0;
-    left: 0;
-
     width: 100%;
 
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 20px 100px;
-
-    z-index: 100;
 }
 
 .logo {
     font-size: 32px;
-    font-weight: 700;
+    font-weight: bold;
     color: #FCF6F5;
     text-decoration: none;
 }
 
 .navbar a {
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 600;
     color: #FCF6F5;
     text-decoration: none;
     margin-left: 20px;
     position: relative;
+}
+.navbar a:nth-child(1) {
+    color: skyblue;
 }
 
 .navbar a::before {
@@ -53,14 +51,60 @@ body {
     bottom: -2;
     left: 0;
 
-    transition: all 300ms;
+    transition: width 300ms;
 }
 
 .navbar a:hover::before {
     width: 95%;
 }
 
-@media screen and (max-width: 750px) {
+
+.home {
+    display: flex;
+    align-items: center;
+    padding: 10%;
+}
+
+.home-content {
+    max-width: 800px;
+}
+
+.home-content h1 {
+    font-size: 3.5em;
+}
+
+.home-content h3 {
+    font-size: 2.5em;
+    color: skyblue;
+    padding-bottom: 1em;
+}
+
+.home-content p {
+    font-family: 'Vollkorn', serif;
+    font-size: 1.2em;
+    padding-bottom: 2em;
+}
+
+.btn-box a {
+    border: solid 2px skyblue;
+    border-radius: 10px;
+    padding: 0.5em;
+    margin: 0.5em;
+    text-decoration: none;
+    font-size: 1.5em;
+}
+
+.btn-box a:nth-child(1) {
+    color: black;
+    background: skyblue;
+}
+
+.btn-box a:nth-last-child(1) {
+    color: skyblue;
+    background: transparent;
+}
+
+@media screen and (max-width: 900px) {
     .header {
         flex-direction: column;
         padding: 0;
