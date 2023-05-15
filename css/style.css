@@ -12,8 +12,6 @@ body {
     color: #FCF6F5;
     background: url("../picture/background.png") no-repeat black;
     background-size: cover;
-
-    animation: fadeIn 1s ease-in;
 }
 
 /* NAVBAR */
@@ -68,6 +66,8 @@ body {
     display: flex;
     align-items: center;
     padding: 7% 10%;
+
+    animation: fadeIn 1s ease-in;
 }
 
 .home-content {
@@ -127,6 +127,8 @@ body {
 
     display: flex;
     justify-content: space-between;
+
+    margin: 20px 100px;
 }
 
 .social-media a {
