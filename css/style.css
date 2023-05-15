@@ -12,7 +12,11 @@ body {
     color: #FCF6F5;
     background: url("../picture/background.png") no-repeat black;
     background-size: cover;
+
+    animation: fadeIn 1s ease-in;
 }
+
+/* NAVBAR */
 
 .header {
     width: 100%;
@@ -58,6 +62,7 @@ body {
     width: 95%;
 }
 
+/* MAIN CONTENT */
 
 .home {
     display: flex;
@@ -112,6 +117,9 @@ body {
     background: transparent;
 }
 
+
+/* SOCIAL MEDIA */
+
 .social-media {
     position: absolute;
     bottom: 40px;
@@ -162,6 +170,9 @@ body {
     color: black;
 }
 
+
+/* MEDIA QUERIES */
+
 @media screen and (max-width: 900px) {
     .header {
         flex-direction: column;
@@ -204,4 +215,15 @@ body {
         padding-bottom: 2em;
     }
 
+}
+
+/* KEYFRAMES ANIMATION */
+@keyframes fadeIn {
+    0% {
+        opacity: 0%;
+    }
+
+    100% {
+        opacity: 100%;
+    }
 }
