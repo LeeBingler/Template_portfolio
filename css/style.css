@@ -88,14 +88,13 @@ body {
 .btn-box a {
     border: solid 2px skyblue;
     border-radius: 10px;
-    padding: 0.5em;
+    padding: 0.5em 0.8em;
     margin: 0.5em;
     text-decoration: none;
     font-size: 1.5em;
 
     transition: box-shadow 300ms;
 }
-
 
 .btn-box a:hover {
     box-shadow:
@@ -152,7 +151,7 @@ body {
     height: 100%;
     background: skyblue;
 
-    transition: width 300ms;
+    transition: width 400ms;
 }
 
 .social-media a:hover::before {
@@ -166,7 +165,11 @@ body {
 @media screen and (max-width: 900px) {
     .header {
         flex-direction: column;
-        padding: 0;
+        padding: 1em 0;
+    }
+
+    .navbar {
+        padding-top: 1.5em;
     }
 
     .navbar a {
@@ -176,4 +179,29 @@ body {
     .navbar a:nth-child(1) {
         margin: 0;
     }
+
+    .btn-box a {
+        padding: 0.3em 0.6em;
+        margin: 0.5em;
+        font-size: 1.3em;
+    }
+
+    .home {
+        padding: 7% 5%;
+    }
+
+    .home-content h1 {
+        font-size: 2.4em;
+    }
+
+    .home-content h3 {
+        font-size: 1.8em;
+        padding-bottom: 0.5em;
+    }
+
+    .home-content p {
+        font-size: 1.2em;
+        padding-bottom: 2em;
+    }
+
 }
