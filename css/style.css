@@ -146,9 +146,9 @@ body {
     overflow: hidden;
     width: 0;
     margin-left: 10px;
-
+    margin-bottom: 10px;
     animation:
-        typing2 1.5s 1.6s steps(15) forwards,
+        typing2 1.5s 1.5s steps(15) forwards,
         cursorBlink .4s step-end infinite alternate;
 }
 
