@@ -170,7 +170,7 @@ body {
     display: flex;
     justify-content: space-between;
 
-    margin: 20px 100px;
+    margin: 2% 5%;
 }
 
 .social-media::before {
@@ -257,7 +257,7 @@ body {
     }
 
     .home {
-        padding: 7% 5%;
+        margin: 7% 3%;
     }
 
     .home-content h1 {
@@ -270,10 +270,15 @@ body {
     }
 
     .home-content p {
-        font-size: 1.2em;
+        font-size: 1.3em;
         padding-bottom: 2em;
     }
 
+    .social-media a {
+        width: 60px;
+        height: 60px;
+        font-size: 30px;
+    }
 }
 
 /* KEYFRAMES ANIMATION */
