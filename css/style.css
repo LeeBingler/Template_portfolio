@@ -66,7 +66,7 @@ body {
     bottom: -2;
     left: 0;
 
-    transition: width 300ms;
+    transition: width .5s;
 }
 
 .navbar a:hover::before {
@@ -83,7 +83,7 @@ body {
     left: 0;
 
     --animation-delay: 0.2s;
-    animation: slideBotToTop .4s var(--animation-delay) ease-in forwards;
+    animation: slideBotToTop 1s var(--animation-delay) ease-in forwards;
 }
 
 .navbar a:nth-child(2)::after {
@@ -107,7 +107,8 @@ body {
 .home {
     display: flex;
     align-items: center;
-    padding: 7% 10%;
+    margin: 7% 10%;
+    animation: fadeIn 1.5s ease-in;
 }
 
 .home-content {
@@ -119,17 +120,15 @@ body {
 }
 
 .home-content h3 {
+    position: relative;
     font-size: 2.5em;
     color: skyblue;
-    padding-bottom: 1em;
 }
 
 .home-content p {
     font-family: 'Vollkorn', serif;
     font-size: 1.2em;
     padding-bottom: 2em;
-
-    animation: fadeIn 1s ease-in;
 }
 
 .btn-box a {
@@ -141,7 +140,7 @@ body {
     font-size: 1.5em;
 
     transition: box-shadow 300ms;
-    animation: fadeIn 1s ease-in;
+    animation: fadeIn 2s ease-in;
 }
 
 .btn-box a:hover {
@@ -181,12 +180,12 @@ body {
     left: 0;
     z-index: 100;
 
-    width: 100%;
+    width: 0%;
     height: 100%;
     background: black;
 
 
-    animation: slideRightToLeft forwards 1s .4s;
+    animation: slideRightToLeft forwards 2s;
 }
 
 .social-media a {
@@ -206,7 +205,7 @@ body {
     text-decoration: none;
 
     overflow: hidden;
-    transition: color 300ms;
+    transition: color .6s;
 }
 
 .social-media a::before {
@@ -219,7 +218,7 @@ body {
     height: 100%;
     background: skyblue;
 
-    transition: width 400ms;
+    transition: width .6s;
 }
 
 .social-media a:hover::before {
@@ -301,11 +300,16 @@ body {
 
 @keyframes slideRightToLeft {
     0% {
+        width: 0%;
+    }
+
+    50% {
         width: 100%;
         left: 0;
     }
 
     100% {
         width: 0%;
+        left: 100%;
     }
 }
