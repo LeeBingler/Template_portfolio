@@ -31,6 +31,10 @@ body {
     color: #FCF6F5;
     text-decoration: none;
     position: relative;
+
+    height: 100%;
+    white-space: nowrap;
+    overflow: hidden;
 }
 
 .logo::before {
@@ -108,27 +112,51 @@ body {
     display: flex;
     align-items: center;
     margin: 7% 10%;
-    animation: fadeIn 1.5s ease-in;
 }
 
 .home-content {
     max-width: 800px;
 }
 
+.container {
+    display: inline-block;
+}
+
 .home-content h1 {
     font-size: 3.5em;
+
+    border-right: 5px solid white;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 0;
+    margin-left: 10px;
+
+    animation:
+        typing 1.5s steps(16) forwards,
+        cursorBlink .4s step-end infinite alternate;
 }
 
 .home-content h3 {
     position: relative;
     font-size: 2.5em;
     color: skyblue;
+
+    border-right: 5px solid transparent;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 0;
+    margin-left: 10px;
+
+    animation:
+        typing2 1.5s 1.6s steps(15) forwards,
+        cursorBlink .4s step-end infinite alternate;
 }
 
 .home-content p {
     font-family: 'Vollkorn', serif;
     font-size: 1.2em;
     padding-bottom: 2em;
+    animation: fadeIn 1.5s ease-in;
 }
 
 .btn-box a {
@@ -292,7 +320,6 @@ body {
     }
 }
 
-
 @keyframes slideBotToTop {
     0% {
         height: 100%;
@@ -309,12 +336,41 @@ body {
     }
 
     50% {
-        width: 100%;
+        width: 101%;
         left: 0;
     }
 
     100% {
         width: 0%;
         left: 100%;
+    }
+}
+
+@keyframes typing {
+    99% {
+        width: 100%;
+        border-color: white;
+    }
+
+    100% {
+        width: 100%;
+        border: transparent;
+    }
+}
+
+@keyframes typing2 {
+    0% {
+        border-color: skyblue;
+    }
+
+    100% {
+        border-color: skyblue;
+        width: 100%
+    }
+}
+
+@keyframes cursorBlink {
+    50% {
+        border-color: transparent;
     }
 }
