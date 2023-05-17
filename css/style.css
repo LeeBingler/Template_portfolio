@@ -12,6 +12,7 @@ body {
     color: #FCF6F5;
     background: url("../picture/background.png") no-repeat black;
     background-size: cover;
+    overflow: hidden;
 }
 
 /* NAVBAR */
@@ -146,7 +147,7 @@ body {
     overflow: hidden;
     width: 0;
     margin-left: 10px;
-    margin-bottom: 10px;
+
     animation:
         typing2 1.5s 1.5s steps(15) forwards,
         cursorBlink .4s step-end infinite alternate;
@@ -155,7 +156,8 @@ body {
 .home-content p {
     font-family: 'Vollkorn', serif;
     font-size: 1.2em;
-    padding-bottom: 2em;
+    margin-bottom: 2em;
+    margin-top: 1em;
     animation: fadeIn 1.5s ease-in;
 }
 
@@ -191,14 +193,14 @@ body {
 /* SOCIAL MEDIA */
 
 .social-media {
-    position: absolute;
-    bottom: 40px;
+    position: relative;
     width: 400px;
 
     display: flex;
     justify-content: space-between;
 
-    margin: 2% 5%;
+    margin: 10%;
+    margin-top: 200px;
 }
 
 .social-media::before {
@@ -261,6 +263,10 @@ body {
 /* MEDIA QUERIES */
 
 @media screen and (max-width: 900px) {
+    body {
+        overflow: auto;
+    }
+
     .header {
         flex-direction: column;
         padding: 1em 0;
@@ -288,18 +294,27 @@ body {
         margin: 7% 3%;
     }
 
+    .home-content {
+        max-width: 650px;
+    }
+
     .home-content h1 {
         font-size: 2.4em;
     }
 
     .home-content h3 {
         font-size: 1.8em;
-        padding-bottom: 0.5em;
     }
 
     .home-content p {
         font-size: 1.18em;
-        padding-bottom: 2em;
+        margin-bottom: 2em;
+        margin-top: 1em;
+    }
+
+    .social-media {
+        margin: 5%;
+        margin-top: 150px;
     }
 
     .social-media a {
